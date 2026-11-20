@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INDEX</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 25px;
+        line-height: 1.6;
+      }
+      .encadre {
+        background-color: #e8f4fd;
+        border: 2px solid #007bff;
+        padding: 10px;
+        border-radius: 6px;
+      }
+      .erreur {
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+    <script src="script.js" defer></script>
+    <script src="validation.js " defer></script>
+  </head>
+  <body>
+    <h1 id="titre">Mon profil étudiant</h1>
+    <p id="message">Bienvenue ! Personnalisez votre profil.</p>
+
+    <label for="nom">Votre nom :</label>
+    <input type="text" id="nom" placeholder="Saisir votre nom" />
+    <button type="button" id="btnAfficher">Afficher mon nom</button>
+    <button type="button" id="btnTitre">Modifier le titre</button>
+
+    <p id="apercu">En attente de saisie</p>
+    <div id="zoneInfo"></div>
+
+    <hr />
+    <p id="texteApercu">Voici le texte à personnaliser.</p>
+    <label><input type="checkbox" id="gras" /> Gras</label>
+    <label><input type="checkbox" id="italique" /> Italique</label>
+
+    <p>Couleur du texte :</p>
+    <label><input type="radio" name="couleur" value="red" /> Rouge</label>
+    <label><input type="radio" name="couleur" value="blue" /> Bleu</label>
+    <label><input type="radio" name="couleur" value="green" /> Vert</label>
+
+    <hr />
+    <label for="domaine">Choisir un domaine :</label>
+    <select id="domaine">
+      <option value="">-- Choisir --</option>
+      <option value="informatique">Informatique</option>
+      <option value="gestion">Gestion</option>
+      <option value="marketing">Marketing</option>
+      <option value="multimedia">Multimédia</option>
+    </select>
+    <p id="resultatDomaine"></p>
+
+    <hr />
+    <p id="messageValidation" aria-live="polite"></p>
+    <button type="submit">Envoyer</button>
+  </body>
+</html>
